@@ -482,6 +482,13 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 
+
+.menu_title{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
 .wrap-menu-header {
   position: absolute;
   width: 100%;
@@ -517,7 +524,22 @@ input[type="date" i] {
 -----------------------------------------------------------
 */
 .logo {
-  height: 50px;
+  height: 150px;
+  display: flex;
+  /* background: red; */
+  width: 25rem;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  background: yellow;
+}
+
+
+
+.logo > div > h3{
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .logo > a{
@@ -972,8 +994,8 @@ input[type="date" i] {
 }
 
 .btn1:hover {
-  background-color: #ec1d25;
-  color: white;
+  background-color: #b48a0c;
+  
 }
 
 /*[ Button3 ]

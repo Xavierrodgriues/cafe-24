@@ -2965,9 +2965,9 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 
 .tit2 {
 	font-family: Courgette;
-	font-size: 30px;
+	font-size:50px;
 	line-height: 1.2;
-	color: #d61c22;
+	color: #bc2a1e;
 }
 
 .tit3 {
@@ -2989,6 +2989,14 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	word-spacing: 6px;
+}
+
+.tit_sp {
+	font-family: Poppins;
+	font-weight: 700;
+	font-size: 35px;
+	color: #bc2a1e;
+
 }
 
 .tit5 {
