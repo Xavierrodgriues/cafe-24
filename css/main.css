@@ -104,6 +104,45 @@ body, html {
   font-weight: 400;
 }
 
+/* Prevent horizontal overflow on mobile screens */
+@media (max-width: 767px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+  }
+}
+
+/* Common video styling */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* fills screen, maintains ratio */
+  z-index: -1;        /* keeps it behind your content */
+}
+
+/* Show only desktop video by default */
+.desktop-video {
+  display: block;
+}
+.mobile-video {
+  display: none;
+}
+
+/* On small screens (mobile), switch to mobile video */
+@media (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
+  .mobile-video {
+    display: block;
+  }
+}
+
+
+
 /* ------------------------------------ */
 a {
 	font-family: Montserrat;

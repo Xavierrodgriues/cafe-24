@@ -2965,9 +2965,15 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 
 .tit2 {
 	font-family: Courgette;
-	font-size:50px;
+	font-size:10vw;
 	line-height: 1.2;
 	color: #bc2a1e;
+}
+
+@media (min-width: 700px) {
+  .tit2{
+    font-size: 50px;
+  }
 }
 
 .tit3 {
