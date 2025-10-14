@@ -526,15 +526,27 @@ input[type="date" i] {
 .logo {
   height: 150px;
   display: flex;
-  /* background: red; */
-  width: 25rem;
+  /*width: 35vw; */
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
-  background: yellow;
+  /*font-weight: bold;
+  background: yellow; */
 }
 
+.logo_name{
+  color: white;
+  font-size: medium;
+  /* background-color: green; */
+  width: 20vw;
+  text-align: right;
+  font-weight: bolder;
+}
 
+@media (min-width: 700px) {
+  .logo_name{
+    font-size: xx-large;
+  }
+}
 
 .logo > div > h3{
   color: white;
@@ -989,13 +1001,13 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 .btn1 {
-  background: white;
+  background: #ec1d25;
   border-radius: 10px;
+  color: white;
 }
 
-.btn1:hover {
-  background-color: #b48a0c;
-  
+.btn1:hover{
+  background: #cfaf53;
 }
 
 /*[ Button3 ]
