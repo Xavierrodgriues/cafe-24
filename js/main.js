@@ -31,6 +31,8 @@
     $(window).on('scroll',function(){
         if ($(this).scrollTop() > windowH) {
             $("#myBtn").css('display','flex');
+        } else {
+            $("#myBtn").css('display','none');
         }
     });
 
