@@ -143,6 +143,7 @@ body, html {
 
 
 
+
 /* ------------------------------------ */
 a {
 	font-family: Montserrat;
@@ -1698,4 +1699,35 @@ body {padding-right: 0px !important;}
   left: 20px;
   border-radius: 10px;
   background-color: #ec1d25;
+}
+
+/* Adjust font size for food items and names on mobile screens */
+@media (max-width: 768px) {
+  .main_menu > li > a {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .main_menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    gap: 10px; /* Add spacing between columns */
+  }
+}
+
+@media (max-width: 576px) {
+  .flex-col-l-sm{
+    align-items: center;
+  }
+
+  .flex-col-l-m{
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .m-r-28{
+    margin-right: 0;
+  }
+
+  
 }
