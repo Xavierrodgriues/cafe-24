@@ -1729,5 +1729,15 @@ body {padding-right: 0px !important;}
     margin-right: 0;
   }
 
+  .size20{
+    width: 85vw;
+    height: auto;
+  }
+
+  .size20 > img{
+    object-fit: contain;
+    width: 100%;
+  }
+
   
 }
