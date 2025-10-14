@@ -535,7 +535,7 @@ input[type="date" i] {
 
 .logo_name{
   color: white;
-  font-size: medium;
+  font-size: 0.8rem;
   /* background-color: green; */
   width: 20vw;
   text-align: right;
