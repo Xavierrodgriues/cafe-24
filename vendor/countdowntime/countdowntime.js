@@ -16,7 +16,7 @@
       };
     }
 
-    function initializeClock(id, endtime) { 
+    function initializeClock(endtime) { 
       var daysSpan = $('.days');
       var hoursSpan = $('.hours');
       var minutesSpan = $('.minutes');
@@ -28,7 +28,7 @@
         daysSpan.html(t.days);
         hoursSpan.html(('0' + t.hours).slice(-2));
         minutesSpan.html(('0' + t.minutes).slice(-2));
-        secondsSpan.html(('0' + t.seconds).slice(-2))
+        secondsSpan.html(('0' + t.seconds).slice(-2));
 
         if (t.total <= 0) {
           clearInterval(timeinterval);
@@ -39,7 +39,12 @@
       var timeinterval = setInterval(updateClock, 1000);
     }
 
-    var deadline = new Date(Date.parse(new Date()) + 25 * 24 * 60 * 60 * 1000 + 13 * 60 * 60 * 1000); 
-    initializeClock('clockdiv', deadline);
+    // Get next Friday
+    var now = new Date();
+    var nextFriday = new Date();
+    nextFriday.setDate(now.getDate() + ((5 - now.getDay() + 7) % 7)); // 5 = Friday
+    nextFriday.setHours(0, 0, 0, 0); // Set to midnight of Friday
+
+    initializeClock(nextFriday);
 
 })(jQuery);
