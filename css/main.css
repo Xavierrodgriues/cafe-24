@@ -1741,3 +1741,79 @@ body {padding-right: 0px !important;}
 
   
 }
+
+/* Make food/gallery/menu images always appear as equal square tiles regardless of source ratio */
+.food-img-wrap,
+.wrap-pic-w,
+.pic-blo3,
+.item-gallery-sidebar {
+  /* Primary: use aspect-ratio where supported to lock to 1:1 */
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.food-img-wrap img,
+.wrap-pic-w img,
+.pic-blo3 img,
+.item-gallery-sidebar img {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* Fallback for browsers without aspect-ratio support: use padding hack */
+@supports not (aspect-ratio: 1 / 1) {
+  .food-img-wrap,
+  .wrap-pic-w,
+  .pic-blo3,
+  .item-gallery-sidebar {
+    height: 0;
+    padding-top: 100%; /* creates a square box */
+  }
+  .food-img-wrap img,
+  .wrap-pic-w img,
+  .pic-blo3 img,
+  .item-gallery-sidebar img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Small utility: if you want fixed pixel squares for thumbnails */
+.square-thumb {
+  width: 160px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Increase tile height on large/desktop screens so food images appear bigger */
+@media (min-width: 1200px) {
+  .food-img-wrap,
+  .wrap-pic-w,
+  .pic-blo3,
+  .item-gallery-sidebar {
+    /* Larger minimum height for big screens; increases visual size even if column is narrow */
+    min-height: 320px;
+    
+  }
+  .item-gallery-sidebar img{
+    object-fit: contain;
+  }
+
+  /* Optional: larger fixed thumbnail utility for big screens */
+  .square-thumb {
+    width: 240px;
+  }
+}
+
