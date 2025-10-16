@@ -1817,3 +1817,10 @@ body {padding-right: 0px !important;}
   }
 }
 
+
+@media (max-width: 576px) {
+  #nav-social-link{
+    display: none;
+  }
+}
+
