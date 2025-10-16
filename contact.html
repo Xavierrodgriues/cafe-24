@@ -322,7 +322,7 @@
                   class="fa fa-envelope fs-13 dis-inline-block size19"
                   aria-hidden="true"
                 ></i>
-                contact@site.com
+                help@hygienicpanipuriwale.com
               </li>
             </ul>
 
@@ -445,7 +445,9 @@
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
 
-    <script>
+    <!-- gmail email -->
+
+    <!-- <script>
       document
         .getElementById("contact-form")
         .addEventListener("submit", function (event) {
@@ -468,6 +470,31 @@
             }
           );
         });
-    </script>
-  </body>
+    </script> -->
+    <script>
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent normal form submission
+
+    // Get form values
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const message = form.message.value;
+
+    // Your WhatsApp number (use country code without + or 00)
+    const whatsappNumber = "8160853068"; // replace with your number
+
+    // Construct message
+    const text = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+  });
+</script>
+
+
+
+</body>
 </html>
