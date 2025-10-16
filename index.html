@@ -2686,5 +2686,19 @@
           });
       });
     </script>
+
+    <script>
+  // Wait for 5 seconds (5000 milliseconds)
+  setTimeout(() => {
+    // Scroll down by 10% of the page height
+    const scrollAmount = window.innerHeight * 0.1; // 10% of viewport height
+    window.scrollBy({
+      top: scrollAmount,
+      left: 0,
+      behavior: 'smooth' // smooth scrolling
+    });
+  }, 5000);
+</script>
+
   </body>
 </html>
